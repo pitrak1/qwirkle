@@ -1,10 +1,36 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
 
-[node name="Control" type="Control"]
+[ext_resource path="res://Background.tscn" type="PackedScene" id=1]
+[ext_resource path="res://TurnIndicator.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Main.gd" type="Script" id=3]
+
+[node name="Main" type="Control"]
+anchor_top = 0.000746841
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 1.00075
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Label" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
-text = "Something something something"
+[node name="Background" parent="." instance=ExtResource( 1 )]
+stretch_mode = 1
+
+[node name="TurnIndicator" parent="." instance=ExtResource( 2 )]
+
+[node name="Player1Button" type="Button" parent="."]
+margin_left = 200.0
+margin_top = 200.0
+margin_right = 400.0
+margin_bottom = 250.0
+text = "Player 1's Turn"
+
+[node name="Player2Button" type="Button" parent="."]
+margin_left = 600.0
+margin_top = 200.0
+margin_right = 800.0
+margin_bottom = 250.0
+text = "Player 2's Turn"
+__meta__ = {
+"_edit_use_anchors_": false
+}
