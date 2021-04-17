@@ -8,7 +8,7 @@ class Tile:
 	var shape
 	var color
 	
-var constants_script = preload("res://Constants.gd")
+var constants_script = preload("res://src/Constants.gd")
 var constants
 
 var stack = []

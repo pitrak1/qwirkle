@@ -4,6 +4,9 @@ var __player_name
 
 func _ready():
 	$Label.text = ""
+	
+func get_text():
+	return $Label.text
 
 func set_player(player_name):
 	self.__player_name = player_name

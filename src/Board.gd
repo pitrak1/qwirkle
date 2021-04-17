@@ -1,8 +1,8 @@
 extends GridContainer
 
-var grid_position_scene = preload("res://GridPosition.tscn")
+var grid_position_scene = preload("res://src/GridPosition.tscn")
 
-var constants_script = preload("res://Constants.gd")
+var constants_script = preload("res://src/Constants.gd")
 var constants
 
 var grid_positions = []

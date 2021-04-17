@@ -7,7 +7,7 @@ var diamond_texture = preload("res://assets/Diamond.png")
 var square_texture = preload("res://assets/Square.png")
 var circle_texture = preload("res://assets/Circle.png")
 
-var constants_script = preload("res://Constants.gd")
+var constants_script = preload("res://src/Constants.gd")
 var constants
 
 func _ready():
