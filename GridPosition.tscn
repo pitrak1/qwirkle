@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/GridPosition.png" type="Texture" id=1]
 [ext_resource path="res://GridPosition.gd" type="Script" id=2]
+[ext_resource path="res://assets/GridPositionError.png" type="Texture" id=3]
+[ext_resource path="res://assets/GridPositionHighlight.png" type="Texture" id=4]
+[ext_resource path="res://assets/Circle.png" type="Texture" id=5]
 
 [node name="GridPosition" type="TextureRect"]
 anchor_right = 1.0
@@ -11,3 +14,24 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Shape" type="TextureRect" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Highlight" type="TextureRect" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 4 )
+
+[node name="Error" type="TextureRect" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 3 )

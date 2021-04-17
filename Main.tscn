@@ -3,7 +3,7 @@
 [ext_resource path="res://Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://TurnIndicator.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Main.gd" type="Script" id=3]
-[ext_resource path="res://Grid.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Board.tscn" type="PackedScene" id=4]
 
 [node name="Main" type="Control"]
 anchor_top = 0.000746841
@@ -36,8 +36,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Grid" parent="." instance=ExtResource( 4 )]
-margin_left = 387.809
-margin_top = 321.215
-margin_right = 707.809
-margin_bottom = 641.215
+[node name="Board" parent="." instance=ExtResource( 4 )]
+margin_left = 262.456
+margin_top = 291.836
+margin_right = 582.456
+margin_bottom = 611.836
