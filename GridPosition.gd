@@ -12,6 +12,12 @@ var constants
 
 func _ready():
 	constants = constants_script.new()
+	
+func set_starting_position():
+	self.modulate = constants.STARTING_POSITION_COLOR
+	
+func clear_starting_position():
+	self.modulate = constants.DEFAULT_COLOR
 
 func set_highlight():
 	$Error.hide()
