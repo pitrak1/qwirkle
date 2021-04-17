@@ -15,8 +15,8 @@ var stack = []
 
 func _init(shuffle=true):
 	self.constants = constants_script.new()
-	for color in self.constants.COLORS:
-		for shape in self.constants.SHAPES:
+	for color in range(0, self.constants.COLORS.size()):
+		for shape in range(0, self.constants.SHAPES.size()):
 			self.stack.append(Tile.new(shape, color))
 			self.stack.append(Tile.new(shape, color))
 			self.stack.append(Tile.new(shape, color))
@@ -25,4 +25,7 @@ func _init(shuffle=true):
 		self.stack.shuffle()
 	
 func draw():
-	return self.stack.pop_back()
+	if self.stack.size():
+		return self.stack.pop_back()
+	else:
+		return null
