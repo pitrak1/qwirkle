@@ -17,3 +17,4 @@ var DEFAULT_COLOR = Color(0, 0, 0, 1)
 var STARTING_POSITION_COLOR = Color(0.5, 1, 0.5, 1)
 
 var BOARD_SIZE = 5
+var HAND_SIZE = 7
