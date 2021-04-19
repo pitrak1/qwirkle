@@ -20,7 +20,7 @@ stretch_mode = 1
 [node name="TurnIndicator" parent="." instance=ExtResource( 2 )]
 
 [node name="Board" parent="." instance=ExtResource( 4 )]
-margin_left = 415.23
-margin_top = 240.912
-margin_right = 735.23
-margin_bottom = 560.912
+margin_left = 440.0
+margin_top = 100.0
+margin_right = 840.0
+margin_bottom = 500.0
