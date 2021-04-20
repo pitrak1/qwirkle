@@ -3,12 +3,16 @@ extends "res://addons/gut/test.gd"
 var constants_script = preload("res://src/Constants.gd")
 var constants
 
-var tile_stack_script = preload("res://src/TileStack.gd")
+var tile_stack_scene = preload("res://src/TileStack.tscn")
 var tile_stack
 
 func before_each():
 	constants = constants_script.new()
-	tile_stack = tile_stack_script.new()
+	tile_stack = tile_stack_scene.instance()
+	add_child(tile_stack)
+	
+func after_each():
+	remove_child(tile_stack)
 	
 func test_creates_three_of_each_shape_and_color():
 	var colors = [0, 0, 0, 0, 0, 0]

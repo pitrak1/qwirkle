@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Bodoni.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/TileStackDisplay.gd" type="Script" id=2]
+
+[node name="TileStackDisplay" type="Label" groups=[
+"DrawTileListener",
+]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1080.0
+margin_bottom = -600.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Tiles Left"
+align = 1
+script = ExtResource( 2 )
+
+[node name="CountLabel" type="Label" parent="."]
+margin_top = 60.0
+margin_right = 200.0
+margin_bottom = 120.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

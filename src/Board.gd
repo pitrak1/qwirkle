@@ -7,7 +7,7 @@ var board_size
 	
 func initialize(size):
 	board_size = size
-	for i in range(0, pow(size, 2)):
+	for _i in range(0, pow(size, 2)):
 		var scene = grid_position_scene.instance()
 		self.add_child(scene)
 		grid_positions.append(scene)

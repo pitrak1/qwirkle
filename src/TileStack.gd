@@ -1,9 +1,9 @@
 extends Node
 
 class Tile:
-	func _init(shape, color):
-		self.shape = shape
-		self.color = color
+	func _init(_shape, _color):
+		self.shape = _shape
+		self.color = _color
 		
 	var shape
 	var color
@@ -13,19 +13,20 @@ var constants
 
 var stack = []
 
-func _init(shuffle=true):
+func _ready():
 	self.constants = constants_script.new()
 	for color in range(0, self.constants.COLORS.size()):
 		for shape in range(0, self.constants.SHAPES.size()):
 			self.stack.append(Tile.new(shape, color))
 			self.stack.append(Tile.new(shape, color))
 			self.stack.append(Tile.new(shape, color))
-	
-	if shuffle:
-		self.stack.shuffle()
+
+	self.stack.shuffle()
 	
 func draw():
 	if self.stack.size():
-		return self.stack.pop_back()
+		var tile = self.stack.pop_back()
+		get_tree().call_group("DrawTileListener", "draw_tile_handler", tile, self.stack.size())
+		return tile
 	else:
 		return null
